@@ -1,1 +1,1 @@
-web: gunicorn img2pdf_site.wsgi
+web: gunicorn img2pdf_site.wsgi:application
