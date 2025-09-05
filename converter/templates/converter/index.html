@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image to PDF Converter</title>
+    <link rel="stylesheet" href="{% static 'converter/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image to PDF Converter</h1>
+
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="images">Select Images:</label>
+            <input type="file" name="images" id="images" multiple required>
+            <button type="submit">Convert to PDF</button>
+        </form>
+    </div>
+</body>
+</html>
