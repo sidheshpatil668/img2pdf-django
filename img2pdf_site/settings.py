@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "django-insecure-replace-this"
 DEBUG = True
-ALLOWED_HOSTS = ["img2pdf-django-1.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 INSTALLED_APPS = [
